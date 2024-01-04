@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -51,6 +52,8 @@ body {
 }
 .activeIcon {
     opacity: 0;
+    transition: all 0,6s ease;
+    transition-delay: 0,2 ;
 }
 .navbar ul li.active-list a i{
     opacity: 1;
@@ -63,9 +66,29 @@ body {
     width: 25px;
     height: 36px;
     background: #7d2ea8;
-    border-radius: 50px;
+    border-radius: 50%;
+    transition: all 0,5s cubic-bezier(0.68, -0.55, 0.265, 1,55);
 
 }
 .indicator::before {
-    content: ;
+    content:"";
+    position: absolute;
+    left: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ea8;
+}
+.indicator::after{
+    content:"";
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: white;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ea8;
 }
